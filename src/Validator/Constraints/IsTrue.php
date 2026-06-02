@@ -11,16 +11,22 @@ use Symfony\Component\Validator\Constraint;
 #[\Attribute(\Attribute::TARGET_PROPERTY | \Attribute::IS_REPEATABLE)]
 class IsTrue extends Constraint
 {
-    public $message = 'This value is not a valid captcha.';
+    public string $message;
 
-    public $invalidHostMessage = 'The captcha was not resolved on the right domain.';
+    public string $invalidHostMessage;
 
-    public function __construct(?array $options = null, ?string $message = null, ?string $invalidHostMessage = null, ?array $groups = null, mixed $payload = null)
+    public function __construct(
+        ?array  $options = null,
+        ?string $message = 'This value is not a valid captcha.',
+        ?string $invalidHostMessage = 'The captcha was not resolved on the right domain.',
+        ?array  $groups = null,
+        mixed   $payload = null
+    )
     {
-        parent::__construct($options ?? [], $groups, $payload);
+        parent::__construct(null, $groups, $payload);
 
-        $this->message = $message ?? $this->message;
-        $this->invalidHostMessage = $invalidHostMessage ?? $this->invalidHostMessage;
+        $this->message = $message;
+        $this->invalidHostMessage = $invalidHostMessage;
     }
 
     /**
