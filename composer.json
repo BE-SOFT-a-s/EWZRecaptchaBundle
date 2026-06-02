@@ -1,13 +1,18 @@
 {
-  "name": "excelwebzone/recaptcha-bundle",
-  "description": "This bundle provides easy reCAPTCHA form field integration",
+  "name": "be-soft/recaptcha-bundle",
+  "description": "This bundle provides easy reCAPTCHA form field integration. (Forked from excelwebzone/EWZRecaptchaBundle)",
   "keywords": [
     "recaptcha"
   ],
-  "homepage": "https://github.com/excelwebzone/EWZRecaptchaBundle",
+  "homepage": "https://github.com/BE-SOFT-a-s/EWZRecaptchaBundle",
   "type": "symfony-bundle",
   "license": "MIT",
   "authors": [
+    {
+      "name": "BE-SOFT a.s.",
+      "email": "admin@besof.tks",
+      "homepage": "https:/besoft.sk/"
+    },
     {
       "name": "Michael H. Arieli",
       "email": "excelwebzone@gmail.com",
